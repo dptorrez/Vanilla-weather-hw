@@ -12,15 +12,15 @@
 <body>
     <div class="data">
     <header>
-        <form class="search-container">
-            <input type="search" placeholder="Enter a city..." class="search-container-input"/>
+        <form class="search-container" id="city-search">
+            <input type="search" placeholder="Enter a city..." class="search-container-input" id="city-entered"/>
             <input type="submit" value="Search" class="search-container-button"/>
         </form>
     </header>
     <main>
         <div class="weather-info">
     <div>
-        <h1 class="choosen-city">Houston</h1>
+        <h1 class="choosen-city" id="city">Houston</h1>
         <p class="choosen-city-info">
         Tuesday 11:01, partially cloudy
         <br />
@@ -34,5 +34,6 @@
     </main>
     <footer>Project coded by <a href="https://github.com/dptorrez">Danna Torres</a>, code hosted on <a href="https://github.com/dptorrez/Vanilla-weather-hw.git" > Github</a> and website hosted on <a href="https://weather-vanilla-shecodeapp.netlify.app/"> Netlify</a></footer>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
