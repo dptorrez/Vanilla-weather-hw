@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Kalam:wght@300;400;700&family=Kurale&family=Poiret+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styling.css"/>
     <title>Document</title>
 </head>
 <body>
     <div class="data">
     <header>
-        <form>
-            <input type="search" placeholder="Enter a city..."/>
-            <input type="submit" value="search"/>
+        <form class="search-container">
+            <input type="search" placeholder="Enter a city..." class="search-container-input"/>
+            <input type="submit" value="Search" class="search-container-button"/>
         </form>
     </header>
     <main>
+        <div class="weather-info">
     <div>
-        <h1>Houston</h1>
-        <p>
+        <h1 class="choosen-city">Houston</h1>
+        <p class="choosen-city-info">
         Tuesday 11:01, partially cloudy
         <br />
-        Humidity: 56%, Wind: 2.13km/h
+        Humidity: <strong>56%</strong>, Wind: <strong>2.13km/h</strong> 
         </p>
     </div>
-        <div>⛅ 22°C</div>
+        <div class="choosen-city-container">
+            <div class="weather-icon">⛅</div> <div class="temp">22</div> <div class="temp-unit">°C</div>
+        </div>
+    </div>
     </main>
     <footer>Project coded by <a href="https://github.com/dptorrez">Danna Torres</a>, code hosted on <a href="https://github.com/dptorrez/Vanilla-weather-hw.git" > Github</a> and website hosted on <a href="https://weather-vanilla-shecodeapp.netlify.app/"> Netlify</a></footer>
     </div>
