@@ -49,3 +49,27 @@ let searchCityElement = document.querySelector("#city-search");
 searchCityElement.addEventListener("submit", searchForInfo);
 
 searchingCity("Houston");
+
+function displayForecast() {
+
+    let days = ['Sat', 'Sun', 'Mon', 'Tue', 'Wed'];
+    let forecastHtml = "";
+
+    days.forEach(function(day)  {
+    forecastHtml = 
+     forecastHtml +
+     `
+    <div class="forecast-date">
+            <div class="forecast-day">${day}</div>
+            <div class="forecast-day-icon">⛅</div>
+            <div class="forecast-day-temps">
+                <div class="forecast-temp"><strong>16°</strong></div>
+                <div class="forecast-temp">8°</div>
+            </div>
+        </div>
+    `;
+    });  
+    let forecastElement = document.querySelector(".weather-forecast");
+    forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();

@@ -12,71 +12,30 @@
 </head>
 <body>
     <div class="data">
-    <header>
-        <form class="search-container" id="city-search">
-            <input type="search" placeholder="Enter a city..." class="search-container-input" id="city-entered"/>
-            <input type="submit" value="Search" class="search-container-button"/>
-        </form>
-    </header>
-    <main>
-        <div class="weather-info">
-    <div>
-        <h1 class="choosen-city" id="city">Houston</h1>
-        <p class="choosen-city-info">
-        <span id="time"></span>, <span class="weather-description">partially cloudy</span>
-        <br />
-        Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind"></strong>
-        </p>
-    </div>
-        <div class="choosen-city-container">
-            <div id="icon"></div>
-             <div class="temp" id="temperature">22</div> <div class="temp-unit">°C</div>
-        </div>
-    </div>
-    <div class="weather-forecast">
-        <div class="forecast-date">
-            <div class="forecast-day">Thurs </div>
-            <div class="forecast-day-icon">⛅</div>
-            <div class="forecast-day-temps">
-                <div class="forecast-temp"><strong> 16° </strong></div>
-                <div class="forecast-temp"> 8° </div>
+        <header>
+            <form class="search-container" id="city-search">
+             <input type="search" placeholder="Enter a city..." class="search-container-input" id="city-entered"/>
+             <input type="submit" value="Search" class="search-container-button"/>
+            </form>
+        </header>
+        <main>
+            <div class="weather-info">
+                    <div>
+                    <h1 class="choosen-city" id="city">Houston</h1>
+                    <p class="choosen-city-info">
+                        <span id="time"></span>, <span class="weather-description">partially cloudy</span>
+                        <br />
+                        Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind"></strong>
+                    </p>
+                    </div>
+                    <div class="choosen-city-container">
+                        <div id="icon"></div>
+                        <div class="temp" id="temperature">22</div> <div class="temp-unit">°C</div>
+                    </div>
             </div>
-        </div>
-        <div class="forecast-date">
-            <div class="forecast-day">Fri </div>
-            <div class="forecast-day-icon">⛅</div>
-            <div class="forecast-day-temps">
-                <div class="forecast-temp"><strong> 16° </strong></div>
-                <div class="forecast-temp"> 8° </div>
-            </div>
-        </div>
-        <div class="forecast-date">
-            <div class="forecast-day">Sat </div>
-            <div class="forecast-day-icon">⛅</div>
-            <div class="forecast-day-temps">
-                <div class="forecast-temp"><strong> 16° </strong></div>
-                <div class="forecast-temp"> 8° </div>
-            </div>
-        </div>
-        <div class="forecast-date">
-            <div class="forecast-day">Sun </div>
-            <div class="forecast-day-icon">⛅</div>
-            <div class="forecast-day-temps">
-                <div class="forecast-temp"><strong> 16° </strong></div>
-                <div class="forecast-temp"> 8° </div>
-            </div>
-        </div>
-        <div class="forecast-date">
-            <div class="forecast-day">Mon </div>
-            <div class="forecast-day-icon">⛅</div>
-            <div class="forecast-day-temps">
-                <div class="forecast-temp"><strong> 16° </strong></div>
-                <div class="forecast-temp"> 8° </div>
-            </div>
-        </div>
-    </div>
-    </main>
-    <footer>Project coded by <a href="https://github.com/dptorrez">Danna Torres</a>, code hosted on <a href="https://github.com/dptorrez/Vanilla-weather-hw.git" > Github</a> and website hosted on <a href="https://bejewelled-peony-70327d.netlify.app/"> Netlify</a></footer>
+                    <div class="weather-forecast"></div>
+        </main>
+        <footer>Project coded by <a href="https://github.com/dptorrez">Danna Torres</a>, code hosted on <a href="https://github.com/dptorrez/Vanilla-weather-hw.git" > Github</a> and website hosted on <a href="https://bejewelled-peony-70327d.netlify.app/"> Netlify</a></footer>
     </div>
     <script src="index.js"></script>
 </body>
