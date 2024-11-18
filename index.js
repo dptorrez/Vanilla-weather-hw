@@ -17,6 +17,8 @@ function getWeather(response) {
     cityElement.innerHTML = response.data.city;
     temperatureElement.innerHTML = Math.round(temperature);
     console.log(response);
+
+    showForecast(response.data.city);
 }
 function showDate(date) {
     let minutes = date.getMinutes();
@@ -48,11 +50,12 @@ function searchForInfo(event) {
 let searchCityElement = document.querySelector("#city-search");
 searchCityElement.addEventListener("submit", searchForInfo);
 
-searchingCity("Houston");
 
-function displayForecast() {
 
-    let days = ['Sat', 'Sun', 'Mon', 'Tue', 'Wed'];
+function displayForecast(response) {
+    console.log(response.data);
+    
+    let days = ["Mon", "Tue", "Wed", "Thurs", "Fri"];
     let forecastHtml = "";
 
     days.forEach(function(day)  {
@@ -72,4 +75,13 @@ function displayForecast() {
     let forecastElement = document.querySelector(".weather-forecast");
     forecastElement.innerHTML = forecastHtml;
 }
-displayForecast();
+
+function showForecast(city) {
+    let key = "bd9741tbdfabbd3bc4c44f3o556466c0";
+    let forecastApi = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}&units=metric`;
+    axios(forecastApi).then(displayForecast);
+    console.log(forecastApi);
+}
+
+
+searchingCity("Houston");
