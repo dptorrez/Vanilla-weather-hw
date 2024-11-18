@@ -51,26 +51,35 @@ let searchCityElement = document.querySelector("#city-search");
 searchCityElement.addEventListener("submit", searchForInfo);
 
 
+function forecastDay(timestamp) {
+    let date= new Date(timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thurs","Fri","Sat"];
+
+    return days[date.getDay()];
+}
 
 function displayForecast(response) {
     console.log(response.data);
     
-    let days = ["Mon", "Tue", "Wed", "Thurs", "Fri"];
     let forecastHtml = "";
 
-    days.forEach(function(day)  {
-    forecastHtml = 
-     forecastHtml +
-     `
-    <div class="forecast-date">
-            <div class="forecast-day">${day}</div>
-            <div class="forecast-day-icon">⛅</div>
+    response.data.daily.forEach(function(day, index)  {
+        if (index < 5) {
+        forecastHtml = 
+        forecastHtml +
+            `
+        <div class="forecast-date">
+            <div class="forecast-day">${forecastDay(day.time)}</div>
+            <div class="forecast-day-icon">
+            <img src="${day.condition.icon_url}" /> 
+            </div>
             <div class="forecast-day-temps">
-                <div class="forecast-temp"><strong>16°</strong></div>
-                <div class="forecast-temp">8°</div>
+                <div class="forecast-temp"><strong>${Math.round(day.temperature.minimum)}°</strong></div>
+                <div class="forecast-temp">${Math.round(day.temperature.maximum)}°</div>
             </div>
         </div>
     `;
+        }
     });  
     let forecastElement = document.querySelector(".weather-forecast");
     forecastElement.innerHTML = forecastHtml;
